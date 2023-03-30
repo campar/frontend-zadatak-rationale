@@ -1,0 +1,45 @@
+.meeting{
+  display:flex;
+  position: relative;
+  justify-content: space-between;
+  margin-top: 55px;
+
+    &:before{
+      content: " ";
+      position: relative;
+      height:6px;
+      width:6px;
+      background:#51ABFF;
+      border-radius: 100%;
+      // flex: 1;
+    }
+  &__wrapper{
+    flex: 1;
+
+    margin-left:6px;
+
+  }
+  &__name{
+    color:#787878;
+    font-size: 12px;
+  }
+
+  &__date{
+    color:$primary-blue;
+    font-size: 12px;
+    font-family: "Metropolis-Medium";
+  }
+
+
+  &__status{
+    background:rgba(254,104,140,.2);
+    color:#FD688C;
+    font-size:12px;
+    font-family: "Metropolis-Medium";
+    padding:3px 14px;
+    border-radius:14px;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+  }
+}
