@@ -4,12 +4,13 @@
 
   <div class="focus__wrapper">
     <app-header></app-header>
-
     <div class="main-container">
       <div class="main-container__content">
         <router-outlet></router-outlet>
       </div>
-      <div class="main-container__right-sidebar">calendar</div>
+      <app-calendar-sidebar
+        class="main-container__right-sidebar"
+      ></app-calendar-sidebar>
     </div>
   </div>
 </div>
