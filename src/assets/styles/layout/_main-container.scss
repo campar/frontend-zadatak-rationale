@@ -1,0 +1,18 @@
+.main-container{
+  display:flex;
+  flex:1;
+
+
+  &__content{
+    flex:1;
+    background: #FBFBFF;
+
+    padding: 20px 45px;
+
+  }
+  &__right-sidebar{
+    width: 344px;
+    // background:gray;
+    box-shadow: 0 0 3px rgba(0,0,0,.15);
+  }
+}

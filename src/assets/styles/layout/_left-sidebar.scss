@@ -1,0 +1,33 @@
+.left-sidebar{
+  width:60px;
+  height:100%;
+  background:$primary-blue;
+  color:white;
+  font-size:10px;
+
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 60px;
+  // justify-content: space-between;
+}
+
+
+  .left-sidebar:first-child{
+    margin-bottom: 70px !important;
+  }
+
+.nav-item{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  padding:12px;
+  &:first-child{
+    margin-bottom:60px;
+  }
+  &:hover{
+    background:white;
+    color:$primary-blue;
+  }
+}

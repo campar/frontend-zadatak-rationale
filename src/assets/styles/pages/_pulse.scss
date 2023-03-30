@@ -1,0 +1,12 @@
+.pulse{
+  &__title{
+    font-size:14px;
+    font-family: "Metropolis-Medium";
+    margin-bottom: 15px;
+  }
+
+  &__quick-section{
+    display:flex;
+    justify-content: space-between;
+  }
+}
