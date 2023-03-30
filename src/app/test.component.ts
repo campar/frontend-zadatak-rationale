@@ -2,9 +2,9 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
+  template: ` <div>test123</div>`,
   // styleUrls: ['./app.component.scss'],
 })
-export class AppComponent {
+export class TestComponent {
   title = 'rationale-focus-miniapp';
 }

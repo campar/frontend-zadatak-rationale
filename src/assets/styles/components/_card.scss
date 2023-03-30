@@ -1,0 +1,51 @@
+.card-wrapper{
+  display:flex;
+}
+.card{
+  position: relative;
+  background:white;
+  box-shadow: 0 0 10px rgba(160, 160,160, .1);
+  width: 122px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  padding:10px;
+  padding-left:12px;
+  margin-right: 15px;
+
+  position:relative;
+
+  &:after{
+ content:"";
+    position:absolute;
+    // z-index:-1;
+    top:100%;
+    bottom:0;
+    width:200%;
+    height:35px;
+    left:-10%;
+    // right:-10%;
+    background:radial-gradient(ellipse at 30% -50%, rgba(0, 0, 0, .2), white 38%);
+
+  }
+  &__name{
+    margin-top: 10px;
+    font-size:12px;
+  }
+
+  &__number{
+    font-family: "Metropolis-Medium";
+    font-size: 14px;
+    margin-top: 8px;
+  }
+
+  &__icon{
+    width:31px;
+    height:31px;
+    background: $primary-blue;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}

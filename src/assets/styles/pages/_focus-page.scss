@@ -1,4 +1,10 @@
 .focus{
   font-family: "Metropolis-Regular";
   height: 100%;
+  display: flex;
+  &__wrapper{
+    display:flex;
+    flex-direction: column;
+    width: 100%;
+  }
 }
