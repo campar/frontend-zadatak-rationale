@@ -1,0 +1,14 @@
+{
+  "calendar": [
+    {
+      "name": "Meeting Name",
+      "date": "2022-11-05T00:00:00",
+      "status": "urgent"
+    },
+    {
+      "name": "Ovo je drugi meeting name",
+      "date": "2022-11-05T00:00:00",
+      "status": "urgent"
+    }
+  ]
+}
