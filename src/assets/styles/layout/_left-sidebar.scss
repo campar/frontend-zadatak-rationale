@@ -1,6 +1,5 @@
 .left-sidebar{
   width:60px;
-  height:100%;
   background:$primary-blue;
   color:white;
   font-size:10px;
@@ -14,7 +13,7 @@
 
 
   .left-sidebar:first-child{
-    margin-bottom: 70px !important;
+    // margin-bottom: 70px !important;
   }
 
 .nav-item{
