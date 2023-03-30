@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { Calendar } from '../models/calendar.model';
 import { CalendarService } from '../services/calendar.service';
+import { map } from 'rxjs/operators';
+
 @Component({
   selector: 'app-calendar-list',
   template: `
@@ -16,9 +18,18 @@ export class CalendarListComponent {
   calendars!: Calendar[];
 
   ngOnInit(): void {
-    this.calendarService.read().subscribe((value) => {
-      this.calendars = value;
-      console.log(value);
-    });
+    this.calendarService
+      .read()
+      .pipe(
+        map((calendar) => {
+          console.log(calendar);
+
+          return calendar;
+        })
+      )
+      .subscribe((value) => {
+        this.calendars = value;
+        console.log(value);
+      });
   }
 }
