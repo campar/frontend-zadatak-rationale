@@ -1,0 +1,16 @@
+.focus-input{
+    border:  1px solid #88859C;
+    border-radius: 3px;
+    height: 30px;
+}
+
+
+
+.checkbox-group{
+  display: flex;
+  align-items: flex-end;
+  margin-top:10px;
+  label{
+    margin-left:8px;
+  }
+}

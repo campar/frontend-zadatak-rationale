@@ -14,3 +14,85 @@
     </div>
   </div>
 </div>
+
+<div class="modal-overlay" *ngIf="true">
+  <div class="modal">
+    <div class="modal__content">
+      <div class="create-item-form">
+        <div class="create-item-form__header">Create Quick Item</div>
+        <div class="create-item-form__body">
+          <div class="input-group">
+            <label for="">Item Title</label>
+            <input type="text" class="focus-input" />
+          </div>
+          <div class="row">
+            <div class="input-group">
+              <label for="">Type</label>
+              <input type="text" class="focus-input" />
+            </div>
+            <div class="input-group">
+              <label for="">Business Unit</label>
+              <input type="text" class="focus-input" />
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-group">
+              <label for="">Due Date</label>
+              <input type="text" class="focus-input" />
+            </div>
+            <div class="input-group">
+              <label for="">Priority</label>
+              <input type="text" class="focus-input" />
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-group">
+              <div>Job Title</div>
+              <div class="checkbox-group">
+                <input type="radio" />
+                <label for="vehicle1">Marketing Coordinator</label>
+              </div>
+              <div class="checkbox-group">
+                <input type="radio" />
+                <label for="vehicle1">Web Designer</label>
+              </div>
+              <div class="checkbox-group">
+                <input type="radio" />
+                <label for="vehicle1">President of Sales</label>
+              </div>
+            </div>
+            <div class="input-group">
+              <div>Languages</div>
+              <div class="checkbox-group">
+                <input type="checkbox" />
+                <label for="vehicle1">Spanish</label>
+              </div>
+              <div class="checkbox-group">
+                <input type="checkbox" />
+                <label for="vehicle1">Chinese</label>
+              </div>
+              <div class="checkbox-group">
+                <input type="checkbox" />
+                <label for="vehicle1">Arabic</label>
+              </div>
+            </div>
+          </div>
+          <div class="input-group">
+            <label for="objective">Objective</label>
+            <textarea
+              id="objective"
+              name="w3review"
+              rows="6"
+              cols="50"
+              class="focus-input"
+            ></textarea>
+          </div>
+        </div>
+        <div class="create-item-form__footer">
+          <button class="secondary-button">Cancel</button>
+          <button class="primary-button">Submit</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
