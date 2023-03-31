@@ -2,20 +2,22 @@ import { Injectable } from '@angular/core';
 import { Calendar } from '../models/calendar.model';
 import { HttpClient } from '@angular/common/http';
 
-import { of } from 'rxjs';
+import { map, of } from 'rxjs';
 
-import * as mockData from '../../../data.json';
+import { environment } from 'src/environments/environment.development';
+import { Task } from '../models/task.model';
 
 @Injectable({
   providedIn: 'root',
 })
 export class CalendarService {
-  // private calendar: Calendar[] = [];
-  data = mockData;
+  constructor(private http: HttpClient) {}
 
-  constructor() {}
+  private API_URL = environment.baseURL;
 
-  read() {
-    return of(this.data.calendar);
+  getMeetings() {
+    return this.http
+      .get<Task[]>(this.API_URL)
+      .pipe(map((data: any) => data.calendar));
   }
 }

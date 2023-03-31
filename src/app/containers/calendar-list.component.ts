@@ -15,21 +15,11 @@ import { map } from 'rxjs/operators';
 export class CalendarListComponent {
   constructor(private calendarService: CalendarService) {}
 
-  calendars!: Calendar[];
+  calendars: Calendar[] = [];
 
   ngOnInit(): void {
-    this.calendarService
-      .read()
-      .pipe(
-        map((calendar) => {
-          console.log(calendar);
-
-          return calendar;
-        })
-      )
-      .subscribe((value) => {
-        this.calendars = value;
-        console.log(value);
-      });
+    this.calendarService.getMeetings().subscribe((value) => {
+      this.calendars = value;
+    });
   }
 }

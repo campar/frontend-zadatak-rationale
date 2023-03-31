@@ -1,19 +1,21 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { of } from 'rxjs';
+import { map, of } from 'rxjs';
+import { environment } from 'src/environments/environment.development';
 
-// import * as mockData from '../../../data.json';
-
-import * as mockData from '../../../data.json';
+import { Task } from '../models/task.model';
 
 @Injectable({
   providedIn: 'root',
 })
 export class ItemsService {
-  data = mockData;
+  constructor(private http: HttpClient) {}
 
-  constructor() {}
+  private API_URL = environment.baseURL;
 
-  read() {
-    return of(this.data.itemsList);
+  getItemsList() {
+    return this.http
+      .get<Task[]>(this.API_URL)
+      .pipe(map((data: any) => data.itemsList));
   }
 }

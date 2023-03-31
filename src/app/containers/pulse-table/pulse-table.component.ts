@@ -9,21 +9,18 @@ import { map } from 'rxjs/operators';
 })
 export class PulseTableComponent {
   constructor(private itemsService: ItemsService) {}
-  items!: Item[];
+  items: Item[] = [];
 
   ngOnInit(): void {
     this.itemsService
-      .read()
+      .getItemsList()
       .pipe(
         map((items) => {
-          console.log(items);
-
           return items;
         })
       )
       .subscribe((value) => {
         this.items = value;
-        console.log(value);
       });
   }
 }
