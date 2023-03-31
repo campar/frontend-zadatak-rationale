@@ -14,6 +14,9 @@ import { ItemRowComponent } from './components/item-row/item-row.component';
 import { ProgressbarComponent } from './components/progressbar/progressbar.component';
 
 import { HttpClientModule } from '@angular/common/http';
+import { CardItemComponent } from './components/card-item/card-item.component';
+import { PopoverComponent } from './components/popover/popover.component';
+import { ClickOutsideDirective } from './directives/click-outside.directive';
 
 @NgModule({
   declarations: [
@@ -27,6 +30,9 @@ import { HttpClientModule } from '@angular/common/http';
     PulseTableComponent,
     ItemRowComponent,
     ProgressbarComponent,
+    CardItemComponent,
+    PopoverComponent,
+    ClickOutsideDirective,
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [],

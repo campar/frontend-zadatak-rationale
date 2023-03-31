@@ -1,6 +1,16 @@
 <div class="logo">
   <img src="assets/svg/Group 9917.svg" alt="" />
 </div>
-<div class="notification">
-  <img src="assets/svg/Vector-3.svg" alt="" />
+<div class="notification" (clickOutside)="isActivePopover = false">
+  <img src="assets/svg/Vector-3.svg" alt="" (click)="togglePopover()" />
+  <app-popover [isActive]="isActivePopover">
+    <div class="notification__item">Notification 1</div>
+    <div class="notification__item">Notification 2</div>
+    <div class="notification__item">Notification 3</div>
+  </app-popover>
 </div>
+
+<!-- popover -->
+<!-- <div class="popover" [class.active]="isActive">
+  <ng-content></ng-content>
+</div> -->

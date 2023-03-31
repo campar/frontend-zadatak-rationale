@@ -1,0 +1,25 @@
+<div class="tasks">
+  <div class="tasks__header">
+    <div class="tasks__title">{{ title }}</div>
+    <div class="tasks__subtitle">{{ subtitle }}</div>
+  </div>
+  <div class="tasks__body">
+    <div class="task" *ngFor="let task of cards">
+      <div class="task__avatar">
+        <img
+          [src]="task.img"
+          alt=""
+          [ngStyle]="{ visibility: task.img ? 'visible' : 'hidden' }"
+        />
+      </div>
+      <div class="task__body">
+        <div class="task__title">{{ task.title }}</div>
+        <div class="task__subtitle">{{ task.subtitle }}</div>
+      </div>
+      <div class="task__progress">
+        <div class="task__date">{{ task.date | date : "dd MMM" }}</div>
+        <app-progressbar [currentProgress]="task.progress"></app-progressbar>
+      </div>
+    </div>
+  </div>
+</div>

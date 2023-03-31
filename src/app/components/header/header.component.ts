@@ -6,4 +6,10 @@ import { Component } from '@angular/core';
   // styleUrls: ['./header.component.scss']
   host: { class: 'header' },
 })
-export class HeaderComponent {}
+export class HeaderComponent {
+  isActivePopover: boolean = false;
+
+  togglePopover() {
+    this.isActivePopover = !this.isActivePopover;
+  }
+}
