@@ -11,6 +11,7 @@ import { MeetingCardComponent } from './components/meeting-card/meeting-card.com
 import { CalendarSidebarComponent } from './components/calendar-sidebar/calendar-sidebar.component';
 import { PulseTableComponent } from './containers/pulse-table/pulse-table.component';
 import { ItemRowComponent } from './components/item-row/item-row.component';
+import { ProgressbarComponent } from './components/progressbar/progressbar.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { ItemRowComponent } from './components/item-row/item-row.component';
     CalendarSidebarComponent,
     PulseTableComponent,
     ItemRowComponent,
+    ProgressbarComponent,
   ],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],

@@ -59,3 +59,59 @@
 </div>
 
 <app-pulse-table></app-pulse-table>
+
+<div class="pulse__cards">
+  <div class="tasks">
+    <div class="tasks__header">
+      <div class="tasks__title">Tasks you initiated</div>
+      <div class="tasks__subtitle">Stay tuned with task you initiated</div>
+    </div>
+    <div class="tasks__body">
+      <div class="task">
+        <div class="task__avatar">
+          <img src="assets/images/Ellipse 359.png" alt="" />
+        </div>
+        <div class="task__body">
+          <div class="task__title">Create new finance document</div>
+          <div class="task__subtitle">Edited 5 hours ago</div>
+        </div>
+        <div class="task__progress">
+          <div class="task__date">22 may</div>
+          <div class="progressbar">
+            <div class="progressbar__current"></div>
+            <div class="progressbar__text">20%</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="tasks">
+    <div class="tasks__header">
+      <div class="tasks__title">Tasks you initiated</div>
+      <div class="tasks__subtitle">Stay tuned with task you initiated</div>
+    </div>
+    <div class="tasks__body">
+      <div class="task">
+        <div class="task__avatar">
+          <img src="assets/images/Ellipse 359.png" alt="" />
+        </div>
+        <div class="task__body">
+          <div class="task__title">Create new finance document</div>
+          <div class="task__subtitle">Edited 5 hours ago</div>
+        </div>
+        <div class="task__progress">
+          <div class="task__date">22 may</div>
+          <app-progressbar [currentProgress]="53"></app-progressbar>
+          <!-- <div class="progressbar">
+            <div
+              class="progressbar__current"
+              [ngStyle]="{ width: 90 + '%' }"
+            ></div>
+            <div class="progressbar__text">20%</div>
+          </div> -->
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

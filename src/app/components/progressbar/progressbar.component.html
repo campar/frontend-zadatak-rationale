@@ -1,0 +1,8 @@
+<div class="progressbar">
+  <div
+    class="progressbar__current"
+    [ngClass]="setColor()"
+    [ngStyle]="{ width: currentProgress + '%' }"
+  ></div>
+  <div class="progressbar__text">{{ currentProgress }}%</div>
+</div>

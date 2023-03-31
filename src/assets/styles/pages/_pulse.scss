@@ -1,4 +1,5 @@
 .pulse{
+  color:$primary-text;
   &__title{
     font-size:14px;
     font-family: "Metropolis-Medium";
@@ -8,5 +9,12 @@
   &__quick-section{
     display:flex;
     justify-content: space-between;
+  }
+
+  &__cards{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 50px;
+    margin-top:62px;
   }
 }
