@@ -10,3 +10,22 @@
   padding-right: 10px;
   z-index: 1;
 }
+
+
+.notification{
+  position:relative;
+
+  &__item{
+    padding:8px 12px;
+    cursor: pointer;
+    &:hover{
+      background:$primary-blue;
+      color:white;
+      border-radius: 6px;
+    }
+
+    }
+  img{
+    cursor: pointer;
+  }
+}
