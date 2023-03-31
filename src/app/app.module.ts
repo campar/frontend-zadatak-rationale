@@ -13,6 +13,8 @@ import { PulseTableComponent } from './containers/pulse-table/pulse-table.compon
 import { ItemRowComponent } from './components/item-row/item-row.component';
 import { ProgressbarComponent } from './components/progressbar/progressbar.component';
 
+import { HttpClientModule } from '@angular/common/http';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -26,7 +28,7 @@ import { ProgressbarComponent } from './components/progressbar/progressbar.compo
     ItemRowComponent,
     ProgressbarComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule],
+  imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [],
   bootstrap: [AppComponent],
 })
