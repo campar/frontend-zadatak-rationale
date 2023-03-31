@@ -3,5 +3,5 @@ export interface Task {
   title: string;
   subtitle: string;
   progress: number;
-  date: string;
+  date: Date;
 }
