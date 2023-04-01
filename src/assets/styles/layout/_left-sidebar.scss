@@ -22,11 +22,12 @@
   width: 100%;
   align-items: center;
   padding:12px;
+  cursor: pointer !important;
   &:first-child{
     margin-bottom:60px;
   }
   &:hover{
     background:white;
-    color:$primary-blue;
+    color:$primary-blue !important;
   }
 }

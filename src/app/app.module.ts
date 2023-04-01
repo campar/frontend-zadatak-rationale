@@ -20,6 +20,9 @@ import { ClickOutsideDirective } from './directives/click-outside.directive';
 import { CreateQuickItemFormComponent } from './components/create-quick-item-form/create-quick-item-form.component';
 import { ModalComponent } from './components/modal/modal.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { ItemsComponent } from './components/items/items.component';
+import { MeetingComponent } from './components/meeting/meeting.component';
+import { ActionsComponent } from './components/actions/actions.component';
 
 @NgModule({
   declarations: [
@@ -38,6 +41,9 @@ import { ReactiveFormsModule } from '@angular/forms';
     ClickOutsideDirective,
     CreateQuickItemFormComponent,
     ModalComponent,
+    ItemsComponent,
+    MeetingComponent,
+    ActionsComponent,
   ],
   imports: [
     BrowserModule,
