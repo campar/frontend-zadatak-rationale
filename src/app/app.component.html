@@ -8,8 +8,12 @@
       <div class="main-container__content">
         <router-outlet></router-outlet>
       </div>
+      <div class="collapse-sidebar">
+        <img src="assets/svg/Vector-11.svg" alt="" />
+      </div>
       <app-calendar-sidebar
         class="main-container__right-sidebar"
+        *ngIf="false"
       ></app-calendar-sidebar>
     </div>
   </div>

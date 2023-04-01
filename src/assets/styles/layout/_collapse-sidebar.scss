@@ -1,0 +1,14 @@
+.collapse-sidebar{
+  background:rgba($primary-blue, .2);
+  width:20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  right:0;
+  top:13px;
+  border-top-left-radius: 2px;
+  border-bottom-left-radius: 2px;
+  cursor: pointer;
+}
