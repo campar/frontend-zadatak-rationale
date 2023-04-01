@@ -1,18 +1,7 @@
 .create-item-form{
 
 
-  display:flex;
-  flex-direction: column;
-  justify-content: space-between;
-  height: 100%;
-  font-family: "Metropolis-Medium";
 
-  &__header{
-    padding:20px;
-    padding-bottom: 17px;
-    border-bottom: 1px solid #D8D8D8;
-    font-size:18px;
-  }
   &__body{
     flex:1;
     padding:15px 20px;
@@ -46,14 +35,4 @@
     }
   }
 
-  &__footer{
-    border-top:1px solid #D8D8D8;
-    padding:12px 20px;
-    display: flex;
-    justify-content: space-between;
-
-    button{
-      font-size: 12px;
-    }
-  }
 }

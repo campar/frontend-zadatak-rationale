@@ -31,9 +31,32 @@ box-shadow:rgba(0,0,0,.25);
 border-radius:9px;
 
 
+  &__header{
+    padding:20px;
+    padding-bottom: 17px;
+    border-bottom: 1px solid #D8D8D8;
+    font-size:18px;
+  }
 
 &__content{
   height:100%;
+
+  display:flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  font-family: "Metropolis-Medium";
 }
 
+
+  &__footer{
+    border-top:1px solid #D8D8D8;
+    padding:12px 20px;
+    display: flex;
+    justify-content: space-between;
+
+    button{
+      font-size: 12px;
+    }
+  }
 }

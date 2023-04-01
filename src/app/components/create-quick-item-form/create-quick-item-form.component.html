@@ -1,0 +1,192 @@
+<form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+  <div class="input-group">
+    <label for="title">Item Title</label>
+    <input
+      id="title"
+      type="text"
+      class="focus-input"
+      formControlName="itemTitle"
+      [class.focus-input--invalid]="
+        registerForm.get('itemTitle')?.invalid &&
+        (registerForm.get('itemTitle')?.dirty ||
+          registerForm.get('itemTitle')?.touched ||
+          isSubmitted)
+      "
+    />
+    <span
+      class="focus-input--error-message"
+      *ngIf="
+        registerForm.get('itemTitle')?.hasError('required') &&
+        (registerForm.get('itemTitle')?.dirty ||
+          registerForm.get('itemTitle')?.touched ||
+          isSubmitted)
+      "
+      >This field is required</span
+    >
+  </div>
+  <div class="row">
+    <div class="input-group">
+      <label for="type">Type</label>
+      <input
+        id="type"
+        type="text"
+        class="focus-input"
+        formControlName="type"
+        [class.focus-input--invalid]="
+          registerForm.get('type')?.invalid &&
+          (registerForm.get('type')?.dirty ||
+            registerForm.get('type')?.touched ||
+            isSubmitted)
+        "
+      />
+      <span
+        class="focus-input--error-message"
+        *ngIf="
+          registerForm.get('type')?.hasError('required') &&
+          (registerForm.get('type')?.dirty ||
+            registerForm.get('type')?.touched ||
+            isSubmitted)
+        "
+        >This field is required</span
+      >
+    </div>
+    <div class="input-group">
+      <label for="unit">Business Unit</label>
+      <input
+        id="unit"
+        type="text"
+        class="focus-input"
+        formControlName="businessUnit"
+        [class.focus-input--invalid]="
+          registerForm.get('businessUnit')?.invalid &&
+          (registerForm.get('businessUnit')?.dirty ||
+            registerForm.get('businessUnit')?.touched ||
+            isSubmitted)
+        "
+      />
+      <span
+        class="focus-input--error-message"
+        *ngIf="
+          registerForm.get('businessUnit')?.hasError('required') &&
+          (registerForm.get('businessUnit')?.dirty ||
+            registerForm.get('businessUnit')?.touched ||
+            isSubmitted)
+        "
+        >This field is required</span
+      >
+    </div>
+  </div>
+  <div class="row">
+    <div class="input-group">
+      <label for="date">Due Date</label>
+      <input
+        id="date"
+        type="text"
+        class="focus-input"
+        formControlName="dueDate"
+        [class.focus-input--invalid]="
+          registerForm.get('dueDate')?.invalid &&
+          (registerForm.get('dueDate')?.dirty ||
+            registerForm.get('dueDate')?.touched ||
+            isSubmitted)
+        "
+      />
+      <span
+        class="focus-input--error-message"
+        *ngIf="
+          registerForm.get('dueDate')?.hasError('required') &&
+          (registerForm.get('dueDate')?.dirty ||
+            registerForm.get('dueDate')?.touched ||
+            isSubmitted)
+        "
+        >This field is required</span
+      >
+    </div>
+    <div class="input-group">
+      <label for="priority">Priority</label>
+      <input
+        id="priority"
+        type="text"
+        class="focus-input"
+        formControlName="priority"
+        [class.focus-input--invalid]="
+          registerForm.get('priority')?.invalid &&
+          (registerForm.get('priority')?.dirty ||
+            registerForm.get('priority')?.touched ||
+            isSubmitted)
+        "
+      />
+      <span
+        class="focus-input--error-message"
+        *ngIf="
+          registerForm.get('priority')?.hasError('required') &&
+          (registerForm.get('priority')?.dirty ||
+            registerForm.get('priority')?.touched ||
+            isSubmitted)
+        "
+        >This field is required</span
+      >
+    </div>
+  </div>
+  <div class="row">
+    <div class="input-group">
+      <div>Job Title</div>
+      <div class="checkbox-group">
+        <input type="radio" id="coordinator" name="job_title" />
+        <label for="coordinator">Marketing Coordinator</label>
+      </div>
+      <div class="checkbox-group">
+        <input type="radio" id="designer" name="job_title" />
+        <label for="designer">Web Designer</label>
+      </div>
+      <div class="checkbox-group">
+        <input type="radio" id="sales" name="job_title" />
+        <label for="sales">President of Sales</label>
+      </div>
+    </div>
+    <div class="input-group">
+      <div>Languages</div>
+      <div class="checkbox-group">
+        <input type="checkbox" id="spanish" name="languages" />
+        <label for="spanish">Spanish</label>
+      </div>
+      <div class="checkbox-group">
+        <input type="checkbox" id="chinese" name="languages" />
+        <label for="chinese">Chinese</label>
+      </div>
+      <div class="checkbox-group">
+        <input type="checkbox" id="arabic" name="languages" />
+        <label for="arabic">Arabic</label>
+      </div>
+    </div>
+  </div>
+  <div class="input-group">
+    <label for="objective">Objective</label>
+    <textarea
+      id="objective"
+      name="w3review"
+      rows="6"
+      cols="50"
+      class="focus-input"
+      formControlName="objective"
+      [class.focus-input--invalid]="
+        registerForm.get('objective')?.invalid &&
+        (registerForm.get('objective')?.dirty ||
+          registerForm.get('objective')?.touched ||
+          isSubmitted)
+      "
+    ></textarea>
+    <span
+      class="focus-input--error-message"
+      *ngIf="
+        registerForm.get('objective')?.hasError('required') &&
+        (registerForm.get('objective')?.dirty ||
+          registerForm.get('objective')?.touched ||
+          isSubmitted)
+      "
+      >This field is required</span
+    >
+  </div>
+  <br /><br />
+  <button type="submit">HELLO</button>
+</form>

@@ -17,6 +17,9 @@ import { HttpClientModule } from '@angular/common/http';
 import { CardItemComponent } from './components/card-item/card-item.component';
 import { PopoverComponent } from './components/popover/popover.component';
 import { ClickOutsideDirective } from './directives/click-outside.directive';
+import { CreateQuickItemFormComponent } from './components/create-quick-item-form/create-quick-item-form.component';
+import { ModalComponent } from './components/modal/modal.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -33,8 +36,15 @@ import { ClickOutsideDirective } from './directives/click-outside.directive';
     CardItemComponent,
     PopoverComponent,
     ClickOutsideDirective,
+    CreateQuickItemFormComponent,
+    ModalComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, HttpClientModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    HttpClientModule,
+    ReactiveFormsModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })
