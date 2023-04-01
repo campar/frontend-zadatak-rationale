@@ -8,8 +8,10 @@ import { Component } from '@angular/core';
 })
 export class HeaderComponent {
   isActivePopover: boolean = false;
+  notificationCounter: number = 2;
 
   togglePopover() {
     this.isActivePopover = !this.isActivePopover;
+    this.notificationCounter = 0;
   }
 }

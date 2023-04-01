@@ -26,6 +26,25 @@
 
     }
   img{
+    width: 16px;
+    height: 18px;
     cursor: pointer;
+  }
+
+
+  &__counter{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top:-5px;
+    left:9px;
+    width: 14px;
+    height: 14px;
+    background: $status-red;
+border-radius: 50px;
+color:white;
+font-family: "Metropolis-SemiBold";
+font-size:9px;
   }
 }

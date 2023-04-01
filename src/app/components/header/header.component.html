@@ -3,10 +3,14 @@
 </div>
 <div class="notification" (clickOutside)="isActivePopover = false">
   <img src="assets/svg/Vector-3.svg" alt="" (click)="togglePopover()" />
+  <div class="notification__counter" *ngIf="notificationCounter">2</div>
   <app-popover [isActive]="isActivePopover">
-    <div class="notification__item">Notification 1</div>
-    <div class="notification__item">Notification 2</div>
-    <div class="notification__item">Notification 3</div>
+    <div class="notification__item" (click)="isActivePopover = false">
+      Notification 1
+    </div>
+    <div class="notification__item" (click)="isActivePopover = false">
+      Notification 2
+    </div>
   </app-popover>
 </div>
 
