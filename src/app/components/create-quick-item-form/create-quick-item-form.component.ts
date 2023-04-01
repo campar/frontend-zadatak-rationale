@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
+import { QuickItemsService } from '../../services/quick-items.service';
 
 @Component({
   selector: 'app-create-quick-item-form',
@@ -17,13 +18,19 @@ export class CreateQuickItemFormComponent {
   });
 
   isSubmitted = false;
-
-  constructor(private fb: FormBuilder) {}
+  heroes = [];
+  constructor(
+    private fb: FormBuilder,
+    private quickItemsService: QuickItemsService
+  ) {}
 
   onSubmit() {
     if (!this.registerForm.invalid) {
       {
-        console.log('forma je vecna');
+        console.log(this.registerForm.value);
+        this.quickItemsService
+          .addQuickitem(this.registerForm.value)
+          .subscribe((item) => console.log(item));
       }
     } else {
       console.log('forma nije validna');

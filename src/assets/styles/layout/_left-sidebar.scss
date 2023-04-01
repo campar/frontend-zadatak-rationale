@@ -26,8 +26,13 @@
   &:first-child{
     margin-bottom:60px;
   }
-  &:hover{
-    background:white;
-    color:$primary-blue !important;
-  }
+  // &:hover{
+  //   background:white;
+  //   color:$primary-blue !important;
+  // }
+}
+
+.is-active{
+  background:white;
+  color:$primary-blue !important;
 }
