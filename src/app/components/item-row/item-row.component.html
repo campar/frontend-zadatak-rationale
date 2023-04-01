@@ -1,11 +1,35 @@
-<td>
-  <div>{{ item.date | date : "MMM" }}</div>
-  <div>{{ item.date | date : "d" }}</div>
+<td
+  [ngClass]="{
+    approved: item.status === 'Approved',
+    rejected: item.status === 'Rejected',
+    'in-progress': item.status === 'In Progress'
+  }"
+>
+  <div class="date">
+    <div class="date__month">{{ item.date | date : "MMM" }}</div>
+    <div class="date__day">{{ item.date | date : "d" }}</div>
+  </div>
 </td>
 <td>{{ item.title }}</td>
 <td>{{ item.businessUnit }}</td>
 <td>
   <img src="assets/images/Ellipse 359.png" alt="" />
 </td>
-<td>{{ item.delay }}</td>
-<td>{{ item.status }}</td>
+<td>
+  <div>
+    {{ item.delay }}
+    <div>eye</div>
+  </div>
+</td>
+<td>
+  <div
+    class="pulse-table__status"
+    [ngClass]="{
+      'pulse-table__status--approved': item.status === 'Approved',
+      'pulse-table__status--rejected': item.status === 'Rejected',
+      'pulse-table__status--in-progress': item.status === 'In Progress'
+    }"
+  >
+    {{ item.status }}
+  </div>
+</td>
