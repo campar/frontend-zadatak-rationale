@@ -6,7 +6,6 @@ import { Action } from 'src/app/models/action.model';
 @Component({
   selector: 'app-card-item',
   templateUrl: './card-item.component.html',
-  styleUrls: ['./card-item.component.scss'],
 })
 export class CardItemComponent {
   @Input() cards!: Task[] | Action[];

@@ -13,12 +13,21 @@
 <td>{{ item.title }}</td>
 <td>{{ item.businessUnit }}</td>
 <td>
-  <img src="assets/images/Ellipse 359.png" alt="" />
+  <img
+    src="assets/images/Ellipse 359.png"
+    alt=""
+    *ngIf="item.userImg; else noImage"
+  />
+  <ng-template #noImage> -- </ng-template>
 </td>
 <td>
-  <div>
-    {{ item.delay }}
-    <div>eye</div>
+  <div class="pulse-table__delay">
+    <div class="pulse-table__overdue" *ngIf="item.status === 'Rejected'">
+      {{ item.delay }}
+    </div>
+    <div class="pulse-table__eye">
+      <img src="assets/svg/Group-1.svg" alt="" />
+    </div>
   </div>
 </td>
 <td>
