@@ -1,6 +1,8 @@
 <div class="calendar-sidebar__header">
   <div class="calendar-sidebar__title">Calendar</div>
-  <div class="calendar-sidebar__close-icon">X</div>
+  <div class="calendar-sidebar__close-icon" (click)="clickClose()">
+    <img src="assets/svg/Vector-12.svg" alt="" />
+  </div>
 </div>
 
 <app-calendar-list></app-calendar-list>

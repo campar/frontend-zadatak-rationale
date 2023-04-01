@@ -1,10 +1,19 @@
-.calendar-sidebar__header{
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 55px;
+.calendar-sidebar{
 
-}
-.calendar-sidebar__title{
-  color:#39475B;
-  font-size: 14px;
+
+
+  &__header{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 55px;
+
+  }
+  &__title{
+    color:#39475B;
+    font-size: 14px;
+  }
+
+  &__close-icon{
+    cursor: pointer;
+  }
 }

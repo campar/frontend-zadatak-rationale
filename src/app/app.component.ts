@@ -7,4 +7,14 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'rationale-focus-miniapp';
+
+  sidebarIsOpen = false;
+
+  showSidebar() {
+    this.sidebarIsOpen = true;
+  }
+
+  parentEventHandler(value: boolean) {
+    this.sidebarIsOpen = value;
+  }
 }

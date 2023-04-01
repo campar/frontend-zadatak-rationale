@@ -8,12 +8,17 @@
       <div class="main-container__content">
         <router-outlet></router-outlet>
       </div>
-      <div class="collapse-sidebar">
+      <div
+        class="collapse-sidebar"
+        *ngIf="!sidebarIsOpen"
+        (click)="showSidebar()"
+      >
         <img src="assets/svg/Vector-11.svg" alt="" />
       </div>
       <app-calendar-sidebar
+        (closeSidebar)="parentEventHandler($event)"
         class="main-container__right-sidebar"
-        *ngIf="false"
+        *ngIf="sidebarIsOpen"
       ></app-calendar-sidebar>
     </div>
   </div>
