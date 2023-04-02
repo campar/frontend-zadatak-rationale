@@ -4,7 +4,7 @@
   border-spacing: 0 10px;
   table-layout: auto !important;
   width: 100%;
-
+  border-radius: 100px !important;
   &__status {
     display: flex;
     align-items: center;
@@ -52,7 +52,7 @@
       background: #5cb85c;
     }
   }
-  tr th:nth-child(5){
+  tr th:nth-child(5) {
     text-align: right;
     padding-right: 100px;
   }
@@ -140,7 +140,6 @@
     white-space: nowrap;
     text-align: end;
     text-align: right;
-    // margin-right: 10px;
   }
 
   thead tr {
@@ -183,11 +182,10 @@
     justify-content: end;
     column-gap: 15px;
     padding-right: 5px;
-
   }
 
   &__overdue {
-    background: rgba($status-red, .15);
+    background: rgba($status-red, 0.15);
     color: $status-red;
     border-radius: 20px;
     padding: 4px 8px;
@@ -203,5 +201,17 @@
     align-items: center;
     justify-content: center;
     cursor: pointer;
+  }
+}
+
+th {
+  &:first-child {
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+  }
+
+  &:last-child {
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
   }
 }
