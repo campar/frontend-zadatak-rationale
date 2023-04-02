@@ -23,7 +23,7 @@
     <div class="pulse-table__overdue" *ngIf="item.status === 'Rejected'">
       {{ item.delay }}
     </div>
-    <div class="pulse-table__eye">
+    <div class="pulse-table__eye" (click)="modalService.showLoremModal = true">
       <img src="assets/svg/Group-1.svg" alt="" />
     </div>
   </div>

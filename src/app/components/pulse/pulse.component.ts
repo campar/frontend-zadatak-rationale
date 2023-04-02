@@ -3,6 +3,7 @@ import { Action } from 'src/app/models/action.model';
 import { Task } from 'src/app/models/task.model';
 import { ActionService } from 'src/app/services/action.service';
 import { TaskService } from '../../services/task.service';
+import { ModalService } from '../../services/modal.service';
 
 @Component({
   selector: 'app-pulse',
@@ -43,7 +44,8 @@ export class PulseComponent {
 
   constructor(
     private taskService: TaskService,
-    private actionService: ActionService
+    private actionService: ActionService,
+    public modalService: ModalService
   ) {}
 
   ngOnInit() {

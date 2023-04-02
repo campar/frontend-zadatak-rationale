@@ -1,10 +1,16 @@
-<div class="modal-overlay">
-  <div class="modal">
+<div
+  class="modal-overlay"
+  (click)="closeCallback()"
+  [ngStyle]="{ display: modalService.showModal ? 'block' : 'none' }"
+>
+  <div class="modal" (click)="$event.stopPropagation()">
     <div class="modal__content">
       <div class="modal__header">Create Quick Item</div>
-      <app-create-quick-item-form></app-create-quick-item-form>
+      <ng-content></ng-content>
       <div class="modal__footer">
-        <button class="secondary-button">Cancel</button>
+        <button class="secondary-button" (click)="closeCallback()">
+          Cancel
+        </button>
         <button class="primary-button">Submit</button>
       </div>
     </div>

@@ -10,6 +10,12 @@ export class AppComponent {
 
   sidebarIsOpen = true;
 
+  showModal = false;
+
+  showQuickFormModal = false;
+
+  showLoremModal = false;
+
   showSidebar() {
     this.sidebarIsOpen = true;
   }

@@ -1,5 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { Item } from 'src/app/models/item.model';
+import { ModalService } from '../../services/modal.service';
 
 @Component({
   selector: '[app-item-row]',
@@ -7,4 +8,6 @@ import { Item } from 'src/app/models/item.model';
 })
 export class ItemRowComponent {
   @Input() item!: Item;
+
+  constructor(public modalService: ModalService) {}
 }

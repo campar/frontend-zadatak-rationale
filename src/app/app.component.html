@@ -24,4 +24,11 @@
   </div>
 </div>
 
-<app-modal *ngIf="false"></app-modal>
+<app-modal [show]="showQuickFormModal">
+  <app-create-quick-item-form></app-create-quick-item-form>
+</app-modal>
+
+<app-modal [show]="showLoremModal">
+  <!-- <app-create-quick-item-form></app-create-quick-item-form> -->
+  LOREM MODAL
+</app-modal>

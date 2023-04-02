@@ -4,7 +4,9 @@
     <app-pulse-info-card *ngFor="let info of dashboardInfos" [info]="info">
     </app-pulse-info-card>
   </div>
-  <button class="primary-button">+ Quick Item</button>
+  <button class="primary-button" (click)="modalService.showModal = true">
+    + Quick Item
+  </button>
 </div>
 
 <app-pulse-table></app-pulse-table>
