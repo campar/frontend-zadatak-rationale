@@ -25,6 +25,8 @@ import { MeetingComponent } from './components/meeting/meeting.component';
 import { ActionsComponent } from './components/actions/actions.component';
 import { PulseInfoCardComponent } from './components/pulse-info-card/pulse-info-card.component';
 
+import { AngularSvgIconModule } from 'angular-svg-icon';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -52,6 +54,7 @@ import { PulseInfoCardComponent } from './components/pulse-info-card/pulse-info-
     AppRoutingModule,
     HttpClientModule,
     ReactiveFormsModule,
+    AngularSvgIconModule.forRoot(),
   ],
   providers: [],
   bootstrap: [AppComponent],
