@@ -1,5 +1,10 @@
 import { Component } from '@angular/core';
-import { FormBuilder, Validators } from '@angular/forms';
+import {
+  FormArray,
+  FormBuilder,
+  FormControl,
+  Validators,
+} from '@angular/forms';
 import { QuickItemsService } from '../../services/quick-items.service';
 
 @Component({
@@ -15,6 +20,8 @@ export class CreateQuickItemFormComponent {
     dueDate: ['', Validators.required],
     priority: ['', Validators.required],
     objective: ['', Validators.required],
+    jobTitle: ['', Validators.required],
+    languages: ['', Validators.required],
   });
 
   isSubmitted = false;
@@ -28,12 +35,17 @@ export class CreateQuickItemFormComponent {
     if (!this.registerForm.invalid) {
       {
         console.log(this.registerForm.value);
+
         //   this.quickItemsService
         //     .addQuickitem(this.registerForm.value)
         //     .subscribe((item) => console.log(item));
         // }
+
+        this.registerForm.reset();
       }
     }
+
+    console.log(this.registerForm.get('languages')?.value);
 
     this.isSubmitted = true;
   }

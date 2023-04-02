@@ -136,32 +136,80 @@
     <div class="input-group">
       <div>Job Title</div>
       <div class="checkbox-group">
-        <input type="radio" id="coordinator" name="job_title" />
+        <input
+          type="radio"
+          id="coordinator"
+          name="jobTitle"
+          formControlName="jobTitle"
+          value="coordinator"
+          [checked]="true"
+        />
         <label for="coordinator">Marketing Coordinator</label>
       </div>
       <div class="checkbox-group">
-        <input type="radio" id="designer" name="job_title" />
+        <input
+          type="radio"
+          id="designer"
+          name="jobTitle"
+          value="designer"
+          formControlName="jobTitle"
+        />
         <label for="designer">Web Designer</label>
       </div>
       <div class="checkbox-group">
-        <input type="radio" id="sales" name="job_title" />
+        <input
+          type="radio"
+          id="sales"
+          name="jobTitle"
+          value="sales"
+          formControlName="jobTitle"
+        />
         <label for="sales">President of Sales</label>
       </div>
+      <span
+        class="focus-input--error-message"
+        *ngIf="
+          registerForm.get('jobTitle')?.invalid &&
+          (registerForm.get('jobTitle')?.touched || isSubmitted)
+        "
+        >Job Title is required</span
+      >
     </div>
     <div class="input-group">
       <div>Languages</div>
       <div class="checkbox-group">
-        <input type="checkbox" id="spanish" name="languages" />
+        <input
+          type="checkbox"
+          id="spanish"
+          value="spanish"
+          formControlName="languages"
+        />
         <label for="spanish">Spanish</label>
       </div>
       <div class="checkbox-group">
-        <input type="checkbox" id="chinese" name="languages" />
+        <input
+          type="checkbox"
+          id="chinese"
+          value="chinese"
+          formControlName="languages"
+        />
         <label for="chinese">Chinese</label>
       </div>
       <div class="checkbox-group">
-        <input type="checkbox" id="arabic" name="languages" />
+        <input
+          type="checkbox"
+          id="arabic"
+          value="arabic"
+          formControlName="languages"
+        />
         <label for="arabic">Arabic</label>
       </div>
+
+      <span
+        class="focus-input--error-message"
+        *ngIf="registerForm.get('languages')?.invalid && isSubmitted"
+        >Language is required</span
+      >
     </div>
   </div>
   <div class="input-group">
@@ -191,6 +239,4 @@
       >This field is required</span
     >
   </div>
-  <br /><br />
-  <button type="submit">HELLO</button>
 </form>
