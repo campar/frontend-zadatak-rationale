@@ -5,9 +5,6 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
   templateUrl: './calendar-sidebar.component.html',
 })
 export class CalendarSidebarComponent {
-  @Input()
-  sidebarIsOpen!: boolean;
-
   @Output()
   closeSidebar: EventEmitter<boolean> = new EventEmitter<boolean>();
 
