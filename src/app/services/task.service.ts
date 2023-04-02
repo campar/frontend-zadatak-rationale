@@ -8,7 +8,7 @@ import { environment } from 'src/environments/environment.development';
 @Injectable({
   providedIn: 'root',
 })
-export class CardItemsService {
+export class TaskService {
   constructor(private http: HttpClient) {}
 
   private API_URL = environment.baseURL;
