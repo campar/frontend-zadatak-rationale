@@ -1,5 +1,5 @@
 export interface Item {
-  date: string;
+  date: Date;
   title: string;
   businessUnit: string;
   userImg?: string;

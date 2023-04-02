@@ -1,20 +1,27 @@
-.pulse{
-  color:$primary-text;
-  &__title{
-    font-size:14px;
+.pulse {
+  color: $primary-text;
+  &__title {
+    font-size: 14px;
     font-family: "Metropolis-Medium";
     margin-bottom: 15px;
   }
 
-  &__quick-section{
-    display:flex;
+  &__quick-section {
+    display: flex;
     justify-content: space-between;
   }
 
-  &__cards{
-    display:grid;
+  &__cards {
+    display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: 50px;
-    margin-top:62px;
+    margin-top: 62px;
+  }
+
+  &-card--overdue {
+    .tasks__title {
+      color: $status-red;
+      font-family: "Metropolis-Regular";
+    }
   }
 }

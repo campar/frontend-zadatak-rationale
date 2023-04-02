@@ -13,12 +13,10 @@
 <td>{{ item.title }}</td>
 <td>{{ item.businessUnit }}</td>
 <td>
-  <img
-    src="assets/images/Ellipse 359.png"
-    alt=""
-    *ngIf="item.userImg; else noImage"
-  />
-  <ng-template #noImage> -- </ng-template>
+  <img [src]="item.userImg" alt="" *ngIf="item.userImg; else noImage" />
+  <ng-template #noImage>
+    <div style="width: 46px; display: flex; justify-content: center">--</div>
+  </ng-template>
 </td>
 <td>
   <div class="pulse-table__delay">

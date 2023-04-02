@@ -1,5 +1,5 @@
 export interface Calendar {
   name: string;
-  date: string;
+  date: Date;
   status?: string;
 }

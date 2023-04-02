@@ -1,59 +1,8 @@
 <h3 class="pulse__title">Waiting your Action</h3>
 <div class="pulse__quick-section">
   <div class="card-wrapper">
-    <div class="card">
-      <div>
-        <div class="card__icon">
-          <img src="assets/svg/Group 12822.svg" />
-        </div>
-        <div class="card__name">Meetings</div>
-      </div>
-
-      <div class="card__number">23</div>
-    </div>
-
-    <div class="card">
-      <div>
-        <div class="card__icon">
-          <img src="assets/svg/Vector-7.svg" />
-        </div>
-        <div class="card__name">Meetings</div>
-      </div>
-
-      <div class="card__number">23</div>
-    </div>
-
-    <div class="card">
-      <div>
-        <div class="card__icon">
-          <img src="assets/svg/Vector-8.svg" />
-        </div>
-        <div class="card__name">Meetings</div>
-      </div>
-
-      <div class="card__number">23</div>
-    </div>
-
-    <div class="card">
-      <div>
-        <div class="card__icon">
-          <img src="assets/svg/Vector-9.svg" />
-        </div>
-        <div class="card__name">Meetings</div>
-      </div>
-
-      <div class="card__number">23</div>
-    </div>
-    <div class="card">
-      <div>
-        <div class="card__icon">
-          <img src="assets/svg/Vector-10.svg" />
-        </div>
-        <div class="card__name">Meetings</div>
-      </div>
-
-      <div class="card__number">23</div>
-    </div>
+    <app-pulse-info-card *ngFor="let info of dashboardInfos" [info]="info">
+    </app-pulse-info-card>
   </div>
   <button class="primary-button">+ Quick Item</button>
 </div>
@@ -67,8 +16,9 @@
     [cards]="tasks"
   ></app-card-item>
   <app-card-item
+    class="pulse-card--overdue"
     title="Overdue Actions"
     subtitle="You’ re late, hurry up!"
-    [cards]="tasks"
+    [cards]="actions"
   ></app-card-item>
 </div>
