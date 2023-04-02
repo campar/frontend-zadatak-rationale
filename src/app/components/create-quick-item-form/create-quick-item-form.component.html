@@ -1,4 +1,8 @@
-<form [formGroup]="registerForm" (ngSubmit)="onSubmit()" id="quickForm">
+<form
+  [formGroup]="registerForm"
+  (ngSubmit)="onSubmit()"
+  #documentEditForm="ngForm"
+>
   <div class="input-group">
     <label for="title">Item Title</label>
     <input

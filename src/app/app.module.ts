@@ -26,6 +26,7 @@ import { ActionsComponent } from './components/actions/actions.component';
 import { PulseInfoCardComponent } from './components/pulse-info-card/pulse-info-card.component';
 
 import { AngularSvgIconModule } from 'angular-svg-icon';
+import { LoremComponent } from './components/lorem/lorem.component';
 
 @NgModule({
   declarations: [
@@ -48,6 +49,7 @@ import { AngularSvgIconModule } from 'angular-svg-icon';
     MeetingComponent,
     ActionsComponent,
     PulseInfoCardComponent,
+    LoremComponent,
   ],
   imports: [
     BrowserModule,

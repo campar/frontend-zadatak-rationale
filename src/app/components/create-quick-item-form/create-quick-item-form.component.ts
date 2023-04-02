@@ -28,12 +28,11 @@ export class CreateQuickItemFormComponent {
     if (!this.registerForm.invalid) {
       {
         console.log(this.registerForm.value);
-        this.quickItemsService
-          .addQuickitem(this.registerForm.value)
-          .subscribe((item) => console.log(item));
+        //   this.quickItemsService
+        //     .addQuickitem(this.registerForm.value)
+        //     .subscribe((item) => console.log(item));
+        // }
       }
-    } else {
-      console.log('forma nije validna');
     }
 
     this.isSubmitted = true;
