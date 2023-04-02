@@ -15,7 +15,7 @@ export class ItemsService {
 
   getItemsList() {
     return this.http
-      .get<Task[]>(this.API_URL)
-      .pipe(map((data: any) => data.itemsList));
+      .get<Task[]>(this.API_URL + '/itemsList')
+      .pipe(map((data: any) => data));
   }
 }

@@ -17,7 +17,7 @@ export class CalendarService {
 
   getMeetings() {
     return this.http
-      .get<Task[]>(this.API_URL)
-      .pipe(map((data: any) => data.calendar));
+      .get<Task[]>(this.API_URL + '/calendar')
+      .pipe(map((data: any) => data));
   }
 }

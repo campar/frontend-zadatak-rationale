@@ -15,7 +15,7 @@ export class TaskService {
 
   getTasks() {
     return this.http
-      .get<Task[]>(this.API_URL)
-      .pipe(map((value: any) => value.tasks));
+      .get<Task[]>(this.API_URL + '/tasks')
+      .pipe(map((value: any) => value));
   }
 }

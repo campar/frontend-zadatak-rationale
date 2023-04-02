@@ -14,7 +14,7 @@ export class ActionService {
 
   getActions() {
     return this.http
-      .get<Action[]>(this.API_URL)
-      .pipe(map((value: any) => value.actions));
+      .get<Action[]>(this.API_URL + '/actions')
+      .pipe(map((value: any) => value));
   }
 }

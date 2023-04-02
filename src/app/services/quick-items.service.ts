@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { map } from 'rxjs';
+import { map, tap } from 'rxjs';
 import { environment } from 'src/environments/environment.development';
 import { QuickItem } from '../models/quick-item';
 import { Task } from '../models/task.model';
@@ -11,11 +11,15 @@ import { Task } from '../models/task.model';
 export class QuickItemsService {
   constructor(private http: HttpClient) {}
 
+  private quickItems: QuickItem[] = [];
+
   private API_URL = environment.baseURL;
 
-  addQuickitem(item: any) {
-    return this.http
-      .post(this.API_URL, item)
-      .pipe(map((data: any) => data.quickItems));
+  addQuickitem(quickItem: any) {
+    const headers = { 'content-type': 'application/json' };
+    const body = JSON.stringify(quickItem);
+    return this.http.post(this.API_URL + '/quicks', body, {
+      headers: headers,
+    });
   }
 }

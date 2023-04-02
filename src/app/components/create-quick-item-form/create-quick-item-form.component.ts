@@ -5,6 +5,8 @@ import {
   FormControl,
   Validators,
 } from '@angular/forms';
+import { map } from 'rxjs';
+import { QuickItem } from 'src/app/models/quick-item';
 import { QuickItemsService } from '../../services/quick-items.service';
 
 @Component({
@@ -30,23 +32,22 @@ export class CreateQuickItemFormComponent {
     private fb: FormBuilder,
     private quickItemsService: QuickItemsService
   ) {}
+  // items: QuickItem = {};
 
   onSubmit() {
     if (!this.registerForm.invalid) {
       {
-        console.log(this.registerForm.value);
-
-        //   this.quickItemsService
-        //     .addQuickitem(this.registerForm.value)
-        //     .subscribe((item) => console.log(item));
-        // }
+        this.quickItemsService
+          .addQuickitem(this.registerForm.value)
+          .subscribe((data) => {
+            console.log('POST Request is successful ', data);
+          });
 
         this.registerForm.reset();
+        this.isSubmitted = false;
       }
+    } else {
+      this.isSubmitted = true;
     }
-
-    console.log(this.registerForm.get('languages')?.value);
-
-    this.isSubmitted = true;
   }
 }
