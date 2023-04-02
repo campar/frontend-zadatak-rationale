@@ -1,12 +1,32 @@
-# RationaleFocusMiniapp
-
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.4.
-
-## Development server
-
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## General info
+> This project is a simple test for a front-end developer position to show skills in SCSS and Angular
 
 
-## Further help
+## Setup
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+```
+
+$ run command ``npm install``
+
+$ run command ``json-server --watch db.json``
+
+$ run command ``ng serve``
+```
+
+Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+
+
+## Technologies
+Project is created with:
+
+- Angular: 15.2.5
+- json-server 0.17.3
+
+## JSON Server
+- Install JSON Server NPM GLobally
+``npm install -g json-server``
+
+- Create db.json file add the objects
+
+- Run the JSON server API using command
+``json-server --watch db.json``
