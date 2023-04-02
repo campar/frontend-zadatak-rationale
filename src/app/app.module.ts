@@ -24,7 +24,6 @@ import { ItemsComponent } from './components/items/items.component';
 import { MeetingComponent } from './components/meeting/meeting.component';
 import { ActionsComponent } from './components/actions/actions.component';
 import { PulseInfoCardComponent } from './components/pulse-info-card/pulse-info-card.component';
-import { SvgIconComponent } from './components/svg-icon/svg-icon.component';
 
 @NgModule({
   declarations: [
@@ -47,7 +46,6 @@ import { SvgIconComponent } from './components/svg-icon/svg-icon.component';
     MeetingComponent,
     ActionsComponent,
     PulseInfoCardComponent,
-    SvgIconComponent,
   ],
   imports: [
     BrowserModule,
