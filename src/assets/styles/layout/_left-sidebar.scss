@@ -23,6 +23,10 @@
   align-items: center;
   padding:12px;
   cursor: pointer !important;
+
+  svg{
+    stroke: white;
+  }
   &:first-child{
     margin-bottom:60px;
   }
@@ -35,4 +39,8 @@
 .is-active{
   background:white;
   color:$primary-blue !important;
+
+  svg{
+    stroke:$primary-blue !important;
+  }
 }
