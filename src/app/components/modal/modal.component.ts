@@ -18,7 +18,7 @@ export class ModalComponent {
     this.modalService.showModal = false;
   }
 
-  @ContentChild(CreateQuickItemFormComponent)
+  @ContentChild(CreateQuickItemFormComponent, { static: false })
   quickForm: any;
 
   submitForm() {

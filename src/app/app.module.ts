@@ -27,6 +27,7 @@ import { PulseInfoCardComponent } from './components/pulse-info-card/pulse-info-
 
 import { AngularSvgIconModule } from 'angular-svg-icon';
 import { LoremComponent } from './components/lorem/lorem.component';
+import { StopPropagationDirective } from './directives/stop-propagation.directive';
 
 @NgModule({
   declarations: [
@@ -50,6 +51,7 @@ import { LoremComponent } from './components/lorem/lorem.component';
     ActionsComponent,
     PulseInfoCardComponent,
     LoremComponent,
+    StopPropagationDirective,
   ],
   imports: [
     BrowserModule,

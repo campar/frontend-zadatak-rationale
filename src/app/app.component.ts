@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 import { ModalService } from './services/modal.service';
+import { ModalComponent } from './components/modal/modal.component';
 
 @Component({
   selector: 'app-root',
@@ -24,5 +25,11 @@ export class AppComponent {
 
   parentEventHandler(value: boolean) {
     this.sidebarIsOpen = value;
+  }
+
+  @ViewChild(ModalComponent) grandchild!: ModalComponent;
+
+  callChild() {
+    this.grandchild.submitForm();
   }
 }
