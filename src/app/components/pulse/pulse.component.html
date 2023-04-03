@@ -4,7 +4,13 @@
     <app-pulse-info-card *ngFor="let info of dashboardInfos" [info]="info">
     </app-pulse-info-card>
   </div>
-  <button class="primary-button" (click)="modalService.showModal = true">
+  <button
+    class="pulse-button pulse-button--primary"
+    (click)="modalService.showModal = true"
+    [ngClass]="color"
+    (mouseover)="changeStyle($event)"
+    (mouseout)="changeStyle($event)"
+  >
     + Quick Item
   </button>
 </div>

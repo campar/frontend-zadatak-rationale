@@ -28,7 +28,11 @@
   <div header>Create Quick Item</div>
   <app-create-quick-item-form></app-create-quick-item-form>
   <div confirmButton>
-    <button class="primary-button" form="quickForm" (click)="callChild()">
+    <button
+      class="pulse-button pulse-button--primary"
+      form="quickForm"
+      (click)="callChild()"
+    >
       Submit
     </button>
   </div>
@@ -39,7 +43,7 @@
   <app-lorem></app-lorem>
   <div confirmButton>
     <button
-      class="primary-button"
+      class="pulse-button pulse-button--primary"
       form="quickForm"
       (click)="modalService.showLoremModal = false"
     >

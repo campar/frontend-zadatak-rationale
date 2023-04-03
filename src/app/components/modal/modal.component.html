@@ -9,7 +9,10 @@
       </div>
 
       <div class="modal__footer">
-        <button class="secondary-button" (click)="closeCallback()">
+        <button
+          class="pulse-button pulse-button--secondary"
+          (click)="closeCallback()"
+        >
           Cancel
         </button>
         <ng-content select="[confirmButton]"> </ng-content>

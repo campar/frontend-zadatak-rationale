@@ -57,4 +57,13 @@ export class PulseComponent {
       .getActions()
       .subscribe((data: Action[]) => (this.actions = data));
   }
+
+  color: string = 'pulse-button--primary';
+
+  changeStyle($event: any) {
+    this.color =
+      $event.type == 'mouseover'
+        ? 'pulse-button--secondary'
+        : 'pulse-button--primary';
+  }
 }
