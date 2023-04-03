@@ -7,7 +7,9 @@ import { Calendar } from '../../models/calendar.model';
     <div class="meeting">
       <div class="meeting__wrapper">
         <div class="meeting__name">{{ meeting.name }}</div>
-        <div class="meeting__date">{{ meeting.date | date : 'M.dd.y' }}</div>
+        <div class="meeting__date">
+          {{ meeting.date | date : 'MM.dd.yyyy' }}
+        </div>
       </div>
 
       <div *ngIf="meeting.status" class="meeting__status">
