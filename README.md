@@ -4,14 +4,11 @@
 
 ## Setup
 
-```
+1) run command ``npm install``
 
-$ run command ``npm install``
+2) run command ``json-server --watch db.json``
 
-$ run command ``json-server --watch db.json``
-
-$ run command ``ng serve``
-```
+3) run command ``ng serve``
 
 Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
