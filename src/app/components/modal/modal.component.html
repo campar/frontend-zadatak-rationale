@@ -1,7 +1,9 @@
 <div class="modal-overlay" (click)="closeCallback()">
-  <div class="modal" (click)="$event.stopPropagation()">
+  <div click-stop-propagation class="modal">
     <div class="modal__content">
-      <div class="modal__header">Create Quick Item</div>
+      <div class="modal__header">
+        <ng-content select="[header]"></ng-content>
+      </div>
       <div class="modal__body">
         <ng-content></ng-content>
       </div>
@@ -10,7 +12,7 @@
         <button class="secondary-button" (click)="closeCallback()">
           Cancel
         </button>
-        <button class="primary-button" form="quickForm" (click)="test()">
+        <button class="primary-button" form="quickForm" (click)="submitForm()">
           Submit
         </button>
       </div>

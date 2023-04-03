@@ -21,8 +21,8 @@ export class ModalComponent {
   @ContentChild(CreateQuickItemFormComponent)
   quickForm: any;
 
-  test() {
-    console.log(this.quickForm.onSubmit());
+  submitForm() {
+    this.quickForm.onSubmit();
     // console.log('test');
     // this.quickItemService.addQuickitem(this.items);
   }

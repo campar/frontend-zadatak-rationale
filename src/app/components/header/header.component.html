@@ -2,12 +2,14 @@
   <img src="assets/svg/Group 9917.svg" alt="" />
 </div>
 <div class="notification" (clickOutside)="isActivePopover = false">
-  <svg-icon
-    src="assets/svg/Vector-3.svg"
-    (click)="togglePopover()"
-    [ngStyle]="{ stroke: isActivePopover === false ? '#6C6C6C' : '#1495F0' }"
-  ></svg-icon>
-  <div class="notification__counter" *ngIf="notificationCounter">2</div>
+  <div click-stop-propagation (click)="togglePopover()">
+    <svg-icon
+      src="assets/svg/Vector-3.svg"
+      [ngStyle]="{ stroke: isActivePopover === false ? '#6C6C6C' : '#1495F0' }"
+    ></svg-icon>
+    <div class="notification__counter" *ngIf="notificationCounter">2</div>
+  </div>
+
   <app-popover [isActive]="isActivePopover">
     <div class="notification__item" (click)="isActivePopover = false">
       Notification 1
