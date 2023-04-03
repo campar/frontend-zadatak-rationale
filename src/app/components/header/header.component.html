@@ -2,7 +2,11 @@
   <img src="assets/svg/Group 9917.svg" alt="" />
 </div>
 <div class="notification" (clickOutside)="isActivePopover = false">
-  <div click-stop-propagation (click)="togglePopover()">
+  <div
+    click-stop-propagation
+    (click)="togglePopover()"
+    class="notification__icon"
+  >
     <svg-icon
       src="assets/svg/Vector-3.svg"
       [ngStyle]="{ stroke: isActivePopover === false ? '#6C6C6C' : '#1495F0' }"
