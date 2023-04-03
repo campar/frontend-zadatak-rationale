@@ -3,11 +3,11 @@
 
 ## Setup
 
-1) run command ``npm install``
+1) run ``npm install``
 
-2) run command ``json-server --watch db.json``
+2) run ``json-server --watch db.json``
 
-3) run command ``ng serve``
+3) run ``ng serve``
 
 
 Navigate to `http://localhost:4200/`
